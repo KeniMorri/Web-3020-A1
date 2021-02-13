@@ -14,10 +14,16 @@
           <a href="" class="active">Home</a>
           <a href="">Products</a>
           <input type="text" id="search">
-          <label for="search"><img src="img/mag.png"></label>
-          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <a href="" onclick="myFunction()">
+            <img src="img/mag.png">
+          </a>
+          <a href="" onclick="myFunction()">
+            <img src="img/cart.png">
+          </a>
+          <a href="" class="icon" onclick="myFunction()">
             <img src="img/ham.png">
           </a>
+          
       </div>
 
       <div class="row" style="height:400px;">
@@ -51,6 +57,7 @@
             </div>
             <br/>
             <div class="rightText">
+              <span>$5.99</span>
               <input type="text" id='quantity' style="width:1em;" value="1">
               <button> Add to Cart</button>
             </div>
@@ -59,8 +66,26 @@
         </div>
       </div>
       <h2>Customers Also viewed:</h2>
-
-
+      <div class="card">
+        <img src="img/anger.png" style="width:100%">
+        <h1>Anger</h1>
+        <p> $5.99 </p>
+      </div>
+      <div class="card">
+        <img src="img/Sadness.png" style="width:100%">
+        <h1>Sadness</h1>
+        <p> $5.99 </p>
+      </div>
+      <div class="card">
+        <img src="img/Meloncholy.png" style="width:100%">
+        <h1>Meloncholy</h1>
+        <p> $5.99 </p>
+      </div>
+      <div class="card">
+        <img src="img/Neutrality.png" style="width:100%">
+        <h1>Neutrality</h1>
+        <p> $5.99 </p>
+      </div>
       <script>
         function myFunction() {
           var x = document.getElementById("myTopnav");

@@ -115,3 +115,11 @@ img.left {
     padding: 70px 0px;
   }
 
+.card {
+    max-width: 250px;
+    margin:10px;
+    text-align: center;
+    padding: 10px 10px;
+    border: 5px solid black;
+    float:left;
+}
