@@ -20,20 +20,46 @@
           </a>
       </div>
 
-      <div class="center">
-        <div class="left">
-          <img class="left" src="img/happiness.png">
+      <div class="row" style="height:400px;">
+        <div class="column">
+          <img id="productIMG" class="left" src="img/happiness.png" alt="image not found">
         </div>
-        <div class="right">
-          <h1 class="rightText" id="title"> Happiness</h1>
-          <h2 class="rightText" id="description"> Description here</h2>
-          <button>Happiness</button>
-          <button>Sadness</button>
-          <button>Meloncholy</button>
-          <button>Neutrality</button>
-          <button>Anger</button>
+        <div class="column">
+          <div class="center">
+            <h1 class="rightText" id="title"> Happiness</h1>
+            <br/>
+            <h4 class="rightText" id="description"> The expression of happiness is thoroughly expressed through this expression so much so that the expression of the expression is shown via the expression, for that is truly the power of happiness</h4>
+            <br/>
+            <ul>
+              <li>
+                Top Notch Quality
+              </li>
+              <li>
+                Instant Delivery
+              </li>
+              <li>
+                Money back guarentee
+              </li>
+            </ul>
+            <div class="rightText">
+              <h4> Emotion Select</h4>
+              <button class="productButton" type="button" onclick="productSelect(this)" disabled>Happiness</button>
+              <button class="productButton" type="button" onclick="productSelect(this)">Sadness</button>
+              <button class="productButton" type="button" onclick="productSelect(this)">Meloncholy</button>
+              <button class="productButton" type="button" onclick="productSelect(this)">Neutrality</button>
+              <button class="productButton" type="button" onclick="productSelect(this)">Anger</button>
+            </div>
+            <br/>
+            <div class="rightText">
+              <input type="text" id='quantity' style="width:1em;" value="1">
+              <button> Add to Cart</button>
+            </div>
+            
+          </div>
         </div>
       </div>
+      <h2>Customers Also viewed:</h2>
+
 
       <script>
         function myFunction() {
@@ -43,6 +69,18 @@
           } else {
             x.className = "topnav";
           }
+        }
+
+        function productSelect(passed) {
+          var boilerPlateText = "The expression of EMOTION is thoroughly expressed through this expression so much so that the expression of the expression is shown via the expression, for that is truly the power of EMOTION EMOTION EMOTION EMOTION EMOTION"
+          for(var i = 0; i < document.getElementsByClassName("productButton").length; i++) {
+            document.getElementsByClassName("productButton")[i].disabled = false;
+          }
+          passed.disabled = true;
+          document.getElementById('title').innerText = passed.innerText;
+          var transformDes = boilerPlateText.replace(/EMOTION/g, passed.innerText)
+          document.getElementById("description").innerText = transformDes;
+          document.getElementById("productIMG").src = "img/" + passed.innerText + ".png";
         }
         </script>
   </body>

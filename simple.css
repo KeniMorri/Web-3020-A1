@@ -88,28 +88,30 @@ label img {
     height: 2em;
 }
 
-div.center {
-    margin: auto;
-    border: 3px solid green;
-    padding: 10px;
-}
-div.left {
-    margin: auto;
-    width:50%;
-    float:left;
-}
-
 img.left {
-    margin: auto;
-    width:100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height:100%;
 }
 
-div.right {
-    margin: auto;
-    width:50%;
-    float:right;
-}
 .rightText {
     margin: auto;
     text-align: center;
 }
+
+.column {
+    float: left;
+    width:50%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.center {
+    padding: 70px 0px;
+  }
+
